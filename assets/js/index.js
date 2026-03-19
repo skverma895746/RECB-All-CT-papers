@@ -4,6 +4,8 @@ const greetWord = document.querySelector(".greetWord");
 if(greetWord){
  let now = new Date();
  let hour = now.getHours();
+ 
+ setTimeout(()=>{
  if(hour>=5 && hour <12)
  {
     greetWord.textContent = "Good Morning ☀️";
@@ -18,6 +20,7 @@ if(greetWord){
  else{
     greetWord.textContent = "Good Night 🌙"
  }
+  },4000)
 }
 
 // popBox 
