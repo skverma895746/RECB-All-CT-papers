@@ -133,6 +133,7 @@ a:hover {
     padding: 20px 10px;
     background-color: var(--headerColor);
     color: white;
+    text-align:center;
 }
 
 /* desktop view  */
