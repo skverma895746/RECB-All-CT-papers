@@ -118,6 +118,7 @@ a {
     padding: 20px 10px;
     background-color: var(--headerColor);
     color: white;
+    text-align:center;
 } 
 /* desktop view  */
 @media screen and (max-width:1000px) {
