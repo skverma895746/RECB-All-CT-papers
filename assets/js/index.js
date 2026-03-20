@@ -10,11 +10,11 @@ if(greetWord){
  {
     greetWord.textContent = "Good Morning ☀️";
  }
- else if(hour >=12 && hour <17)
+ else if(hour >=12 && hour <16)
  {
     greetWord.textContent = "Good Afternoon 🌤️";
  }
- else if(hour >=17 && hour< 20){
+ else if(hour >=16 && hour< 20){
        greetWord.textContent = "Good Evening 🌇";
  }
  else{
