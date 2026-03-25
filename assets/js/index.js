@@ -27,7 +27,7 @@ if (links && errorBox) {
         link.addEventListener("click", (e) => {
             if (link.getAttribute("href") === "") {
                 e.preventDefault();             
-                errorBox.textContent = " ⚠️PDF will available soon."
+                errorBox.textContent = "⚠️ PDF will available soon."
                 errorBox.style.display = "flex";
             }
             setTimeout(() => {
