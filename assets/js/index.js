@@ -4,17 +4,16 @@ const greetWord = document.querySelector(".greetWord");
 if(greetWord){
  let now = new Date();
  let hour = now.getHours();
- 
  setTimeout(()=>{
  if(hour>=5 && hour <12)
  {
     greetWord.textContent = "Good Morning ☀️";
  }
- else if(hour >=12 && hour <16)
+ else if(hour >=12 && hour <17)
  {
     greetWord.textContent = "Good Afternoon 🌤️";
  }
- else if(hour >=16 && hour< 20){
+ else if(hour >=17 && hour< 20){
        greetWord.textContent = "Good Evening 🌇";
  }
  else{
@@ -22,7 +21,6 @@ if(greetWord){
  }
   },4000)
 }
-
 // popBox 
 if (links && errorBox) {
     links.forEach((link) => {
@@ -38,4 +36,3 @@ if (links && errorBox) {
         })
     })
 }
-
