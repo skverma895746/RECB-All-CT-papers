@@ -6,9 +6,12 @@
 }
 
 :root {
-    --headerColor: #003b6d;
-    --footerColor: #3e54a0;
-    --borderColor: darkblue;
+    --headerColor:#FFFFFF;
+    --borderColor:#FF6E00;
+    --color:#0A0A0A;
+    --footer:#FFFFFF;
+    --boxShadow:#C0C0C0;
+    --backGroundColor:#F5F5F5;
 }
 
 .container {
@@ -20,7 +23,7 @@
     justify-content: center;
     align-items: center;
     padding: 20px 0px;
-    color: var(--headerColor);
+    color: var(--borderColor);
 }
 
 .googleForm {
@@ -30,26 +33,23 @@
     width: 100%;
 
 }
-
 .googleForm iframe {
     width: 100%;
 }
-
 a {
     text-decoration: none;
-    color: white;
+    color:var(--color);
 }
-
 .goToHome {
     position: fixed;
     top: 70px;
-    right: 10px;
+    left: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px 10px;
-    background-color: var(--headerColor);
-    color: white;
+    background-color: var(--borderColor);
+    border-radius:5px;
 }
 
 .footer {
@@ -59,6 +59,5 @@ a {
     flex-direction: column;
     padding: 20px 10px;
     background-color: var(--headerColor);
-    color: white;
-    text-align:center;
+    box-shadow: 0px 0px 1px 1px var(--boxShadow);
 }
