@@ -6,9 +6,15 @@
 }
 
 :root {
-    --headerColor: #003b6d;
-    --footerColor: #3e54a0;
-    --borderColor: darkblue;
+    --headerColor:#FFFFFF;
+    --borderColor:#FF6E00;
+    --color:#0A0A0A;
+    --footer:#FFFFFF;
+    --boxShadow:#C0C0C0;
+    --backGroundColor:#F5F5F5;
+}
+body{
+    background:var(--backGroundColor);
 }
 
 .container {}
@@ -19,9 +25,10 @@
     align-items: center;
     padding: 10px;
     background-color: var(--headerColor);
-    color: white;
+    color:var(--color);
     position: sticky;
     top: 0;
+    box-shadow: 0px 0px 1px 1px var(--boxShadow);
     z-index: 1000;
 }
 
@@ -64,12 +71,11 @@
     color: inherit;
     padding: 8px;
     border-radius: 25px;
-    box-shadow: 0px 0px 1px white;
+    box-shadow: 0px 0px 2px 1px var(--borderColor);
 }
 
 .header .links>a:hover {
-    background: whitesmoke;
-    color: black;
+    background:var(--borderColor);
     transition: background 1s;
 }
 
@@ -80,7 +86,7 @@ a {
 
 a:hover {
     text-decoration: underline;
-    color: red;
+    color:var(--borderColor);
     text-underline-offset: 5px;
 }
 
@@ -92,13 +98,13 @@ a:hover {
     justify-content: center;
     align-items: center;
     width: 300px;
-    border: 1px solid #003b6d;
     font-size: 20px;
     border-radius: 25px;
-    background: var(--headerColor);
-    color: yellow;
+    background: var(--borderColor);
+    box-shadow: 0px 0px 1px 1px var(--boxShadow);
+    color:yellow;
     display: none;
-    padding:10px;
+    padding:12px;
 }
 
 .greetWord {
@@ -107,7 +113,7 @@ a:hover {
     align-items: center;
     padding: 10px;
     text-align: center;
-    background:#2cdb66;;
+    background:var(--borderColor);
     color: white;
     animation: Move 2s linear 0.5s forwards;
     overflow: hidden;
@@ -136,7 +142,8 @@ a:hover {
     align-items: center;
     flex-direction: column;
     padding: 20px 20px;
-    background: #93d1ff;
+    background:var(--headerColor);
+    box-shadow: 0px 0px 0px 1px var(--boxShadow);
     gap: 20px;
 }
 
@@ -150,9 +157,10 @@ a:hover {
     align-items: center;
     flex-direction: column;
     padding: 20px 10px;
-    background-color: var(--headerColor);
-    color: white;
+    background-color: var(--footer);
+    color:var(--color);
     text-align: center;
+    box-shadow: 0px 0px 1px 1px var(--boxShadow);
 }
 
 /* desktop view  */
@@ -188,7 +196,6 @@ a:hover {
         justify-content: center;
         align-items: center;
     }
-
     .section1 {
         grid-template-columns: repeat(1, 95%);
         gap: 10px;
