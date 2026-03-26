@@ -6,13 +6,17 @@
 }
 
 :root {
-    --headerColor: #003b6d;
-    --footerColor: #3e54a0;
-    --borderColor: darkblue;
+    --headerColor:#FFFFFF;
+    --borderColor:#FF6E00;
+    --color:#0A0A0A;
+    --footer:#FFFFFF;
+    --boxShadow:#C0C0C0;
+    --backGroundColor:#F5F5F5;
 }
 
 .container {
     position: relative;
+    background: var(--backGroundColor);
 }
 
 .header {
@@ -23,8 +27,9 @@
     align-items: center;
     padding: 10px;
     background-color: var(--headerColor);
-    color: white;
+    color: var(--color);
     z-index: 1000;
+    box-shadow: 0px 0px 1px 1px var(--boxShadow);
 }
 
 .header .logoCon {
@@ -66,11 +71,11 @@
     color: inherit;
     padding: 8px;
     border-radius: 25px;
-    box-shadow: 0px 0px 1px white;
+    box-shadow: 0px 0px 1px 1px var(--borderColor);
 }
 
 .header .links>a:hover {
-    background: whitesmoke;
+    background: var(--borderColor);
     color: black;
     transition: background 1s;
 }
@@ -83,7 +88,7 @@ a {
 a:hover {
     text-decoration: underline;
     text-underline-offset: 5px;
-    color: red;
+    color:var(--borderColor);
 }
 
 .main {
@@ -104,7 +109,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     width: 300px;
-    border: 1px solid #003b6d;
+    box-shadow: 0px 0px 1px 1px var(--boxShadow);
     font-size: 20px;
     border-radius: 25px;
     background: var(--headerColor);
@@ -118,7 +123,7 @@ a:hover {
     grid-template-columns: repeat(2, 550px);
     justify-content: center;
     align-items: center;
-    gap:20px;
+    gap: 20px;
 }
 
 .section1 .ctpaperlink {
@@ -127,11 +132,12 @@ a:hover {
     align-items: center;
     flex-direction: column;
     padding: 20px 20px;
-    background: #93d1ff;
+    background: var(--headerColor);
     gap: 15px;
     backdrop-filter: blur(10px);
     border-radius: 8px;
-}
+    box-shadow: 0px 0px 1px 1px var(--boxShadow);
+} 
 
 .footer {
     display: flex;
@@ -140,8 +146,9 @@ a:hover {
     flex-direction: column;
     padding: 20px 10px;
     background-color: var(--headerColor);
-    color: white;
+    color: var(--color);
     text-align: center;
+    box-shadow: 0px 0px 1px 1px var(--boxShadow);
 }
 
 /* desktop view  */
@@ -172,7 +179,6 @@ a:hover {
         justify-content: center;
         align-items: center;
     }
-
     .section1 {
         grid-template-columns: repeat(1, 95%);
         gap: 10px;
