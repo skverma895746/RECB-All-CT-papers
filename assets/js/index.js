@@ -36,3 +36,14 @@ if (links && errorBox) {
         })
     })
 }
+// when page loaded
+document.addEventListener("DOMContentLoaded", () => {
+    if (links && errorBox) {
+        links.forEach((link) => {
+            if (link.getAttribute("href") === "" || link.getAttribute("href") === "#") {
+                link.style.color = "red";
+            }
+
+        })
+    }
+})
