@@ -6,12 +6,12 @@
 }
 
 :root {
-    --headerColor:#FFFFFF;
-    --borderColor:#FF6E00;
-    --color:#0A0A0A;
-    --footer:#FFFFFF;
-    --boxShadow:#C0C0C0;
-    --backGroundColor:#F5F5F5;
+    --headerColor:#FDFEFE;
+    --borderColor:#0F766E;
+    --color:#0F172A;
+    --footer:#FDFEFE;
+    --boxShadow:#B8D4D1;
+    --backGroundColor:#ECFDF5;
 }
 body{
     background:var(--backGroundColor);
@@ -105,6 +105,7 @@ a:hover {
     color:yellow;
     display: none;
     padding:12px;
+    margin:center;
 }
 
 .greetWord {
