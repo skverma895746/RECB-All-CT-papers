@@ -5,17 +5,19 @@ if (links && errorBox) {
         link.addEventListener("click", (e) => {
             if (link.getAttribute("href") === "" || link.getAttribute("href") == "#") {
                 e.preventDefault();
-                errorBox.textContent = popupMessage("⚠️Pdf will available soon.")
-                errorBox.style.bottom = "50px";
+                popupMessage("⚠️Pdf will available soon.")
             }
-            setTimeout(() => {
-                errorBox.style.bottom = "-100%";
-            }, 1500)
+      
         })
     })
 }
 function popupMessage(msg){
-return msg;
+    errorBox.textContent = msg;
+    errorBox.style.bottom = "50px";
+
+    setTimeout(() => {
+        errorBox.style.bottom = "-100%";
+    }, 1500);
 }
 // when page loaded
 document.addEventListener("DOMContentLoaded", () => {
