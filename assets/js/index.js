@@ -27,14 +27,17 @@ if (links && errorBox) {
         link.addEventListener("click", (e) => {
             if (link.getAttribute("href") === "") {
                 e.preventDefault();             
-                errorBox.textContent = " ⚠️PDF will available soon."
-                errorBox.style.display = "flex";
+                errorBox.textContent = popupMessage("⚠️Page will available soon.")
+                errorBox.style.bottom = "50px";
             }
             setTimeout(() => {
-                errorBox.style.display = "none";
+                errorBox.style.bottom = "-100%";
             }, 1500)
         })
     })
+}
+function popupMessage(msg){
+ return msg;
 }
 // when page loaded
 document.addEventListener("DOMContentLoaded", () => {
