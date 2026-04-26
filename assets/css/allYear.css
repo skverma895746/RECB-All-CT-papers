@@ -100,15 +100,21 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
     width: 300px;
     font-size: 20px;
-    border-radius: 25px;
+    border-radius:10px;
     background: var(--borderColor);
     box-shadow: 0px 0px 1px 1px var(--boxShadow);
     color:yellow;
     padding:15px;
     z-index: 10000;
     transition: bottom 0.4s ease-in-out;
+}
+.errorDilogBox #errorIcon {
+    font-size:30px;
+    margin-bottom: 5px;
 }
 
 .greetWord {
