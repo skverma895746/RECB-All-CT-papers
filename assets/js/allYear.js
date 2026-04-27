@@ -7,7 +7,7 @@ if (links && errorBox) {
             console.log(text)
             if (link.getAttribute("href") === "" || link.getAttribute("href") == "#") {
                 e.preventDefault();
-                popupMessage(`⚠️${text} will be available soon.`)
+                popupMessage(`${text} will be available soon.`)
             }
       
         })
