@@ -17,6 +17,11 @@
     --cardBorder: rgba(15, 118, 110, 0.16);
 }
 
+body {
+    min-height: 100vh;
+    background: #ffffff;
+}
+
 .container {
     position: relative;
     min-height: 100vh;
