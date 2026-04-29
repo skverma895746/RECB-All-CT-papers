@@ -7,24 +7,39 @@
 
 :root {
     --headerColor: #ffffff;
-    --borderColor: #dc2626;
-    --color: #1f2937;
-    --footer: #fff5f5;
-    --boxShadow: #e5c7c7;
-    --backGroundColor: #fef2f2;
+    --borderColor: #0f766e;
+    --accentColor: #f59e0b;
+    --color: #172033;
+    --mutedColor: #64748b;
+    --footer: #eef6f4;
+    --boxShadow: rgba(15, 23, 42, 0.12);
+    --backGroundColor: #f6faf9;
+    --cardBorder: rgba(15, 118, 110, 0.16);
 }
 
 .container {
     position: relative;
-    background: var(--backGroundColor);
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(15, 118, 110, 0.18) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 118, 110, 0.18) 1px, transparent 1px),
+        radial-gradient(circle at top left, rgba(20, 184, 166, 0.16), transparent 30%),
+        linear-gradient(135deg, #f6faf9 0%, #eef7ff 100%);
+    background-size: 34px 34px, 34px 34px, auto, auto;
+    color: var(--color);
 }
 
 .heading {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0px;
-    color: var(--borderColor);
+    padding: 34px 16px 18px;
+    color: #0f172a;
+    text-align: center;
+}
+
+.heading h1 {
+    font-size: clamp(32px, 5vw, 52px);
 }
 
 .googleForm {
@@ -32,10 +47,14 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-
+    padding: 0 16px;
 }
 .googleForm iframe {
-    width: 100%;
+    width: min(100%, 960px);
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+    border: 1px solid var(--cardBorder);
 }
 a {
     text-decoration: none;
@@ -43,18 +62,25 @@ a {
 }
 .goToHome {
     position: fixed;
-    top: 70px;
-    left: 10px;
+    top: 18px;
+    left: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 10px;
+    padding: 10px 16px;
     background-color: var(--borderColor);
-    border-radius:5px;
+    border-radius:999px;
+    box-shadow: 0 12px 28px rgba(15, 118, 110, 0.22);
+    transition: 0.25s ease;
 }
 
 .goToHome a {
     color: #ffffff;
+    font-weight: 700;
+}
+
+.goToHome:hover {
+    transform: translateY(-2px);
 }
 
 .footer {
@@ -62,7 +88,13 @@ a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px 10px;
-    background-color: var(--headerColor);
-    box-shadow: 0px 0px 1px 1px var(--boxShadow);
+    gap: 6px;
+    padding: 26px 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid var(--cardBorder);
+    box-shadow: 0 -10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.footer p {
+    color: var(--mutedColor);
 }

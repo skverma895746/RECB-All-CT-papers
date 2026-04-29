@@ -7,15 +7,25 @@
 
 :root {
     --headerColor: #ffffff;
-    --borderColor: #dc2626;
-    --color: #1f2937;
-    --footer: #fff5f5;
-    --boxShadow: #e5c7c7;
-    --backGroundColor: #fef2f2;
+    --borderColor: #0f766e;
+    --accentColor: #f59e0b;
+    --color: #172033;
+    --mutedColor: #64748b;
+    --footer: #eef6f4;
+    --boxShadow: rgba(15, 23, 42, 0.12);
+    --backGroundColor: #f6faf9;
+    --cardBorder: rgba(15, 118, 110, 0.16);
 }
 
 body{
-    background:var(--backGroundColor);
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(15, 118, 110, 0.18) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 118, 110, 0.18) 1px, transparent 1px),
+        radial-gradient(circle at top left, rgba(20, 184, 166, 0.16), transparent 30%),
+        linear-gradient(135deg, #f6faf9 0%, #eef7ff 100%);
+    background-size: 34px 34px, 34px 34px, auto, auto;
+    color: var(--color);
 }
 
 .container {}
@@ -24,33 +34,37 @@ body{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 10px;
-    background-color: var(--headerColor);
+    padding: 12px 28px;
+    background-color: rgba(255, 255, 255, 0.92);
     color:var(--color);
     position: sticky;
     top: 0;
-    box-shadow: 0px 0px 1px 1px var(--boxShadow);
+    border-bottom: 1px solid var(--cardBorder);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    backdrop-filter: blur(14px);
     z-index: 1000;
 }
 
 .header .logoCon {
     display: flex;
-    gap: 20px;
+    gap: 16px;
     justify-content: center;
     align-items: center;
 }
 
 .header .logo {
-    width: 80px;
-    height: 80px;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
     overflow: hidden;
-    border: 2px solid var(--borderColor);
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 3px var(--borderColor), 0 10px 24px rgba(15, 23, 42, 0.16);
 }
 
 .header .logo img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     filter: contrast(1.2);
 }
 
@@ -60,29 +74,43 @@ body{
     align-items: center;
 }
 
+.header .logoCon .text h2 {
+    font-size: clamp(18px, 2.2vw, 28px);
+    line-height: 1.25;
+    color: #0f172a;
+}
+
 .header .links {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .header .links>a {
     text-decoration: none;
     color: inherit;
-    padding: 8px;
-    border-radius: 25px;
-    box-shadow: 0px 0px 2px 1px var(--borderColor);
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--cardBorder);
+    background: #ffffff;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+    font-weight: 700;
+    transition: 0.25s ease;
 }
 
 .header .links>a:hover {
     background:var(--borderColor);
-    transition: background 1s;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-2px);
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    transition: 0.2s ease;
 }
 
 a:hover {
@@ -102,12 +130,12 @@ a:hover {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    width: 300px;
+    width: min(92vw, 360px);
     font-size: 20px;
-    border-radius:10px;
-    background: var(--borderColor);
-    box-shadow: 0px 0px 1px 1px var(--boxShadow);
-    color:yellow;
+    border-radius:8px;
+    background: #0f172a;
+    box-shadow: 0 18px 44px rgba(15, 23, 42, 0.24);
+    color:#fde68a;
     padding:15px;
     z-index: 10000;
     transition: bottom 0.4s ease-in-out;
@@ -121,13 +149,19 @@ a:hover {
     display:flex;
     justify-content: center;
     align-items: center;
-    padding:20px;
+    padding:28px 24px;
     text-align: center;
-    background:var(--borderColor);
+    background:linear-gradient(135deg, rgba(15, 118, 110, 0.95), rgba(14, 116, 144, 0.92));
     color: white;
     width:1120px;
     margin:0px auto;
-    box-shadow: 0px 0px 36px 1px var(--boxShadow);
+    border-radius: 8px;
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+}
+
+.greetWord h3 {
+    font-size: clamp(20px, 2.4vw, 30px);
+    line-height: 1.35;
 }
 
 
@@ -136,7 +170,8 @@ a:hover {
     grid-template-columns: repeat(2, 550px);
     justify-content: center;
     align-items: center;
-    gap:20px;
+    gap:22px;
+    padding-bottom: 20px;
 }
 
 .section1 .ctpaperlink {
@@ -146,14 +181,47 @@ a:hover {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    padding: 20px 20px;
-    background:var(--headerColor);
-    box-shadow: 0px 0px 0px 1px var(--boxShadow);
-    gap: 20px;
+    padding: 24px 22px;
+    background:rgba(255, 255, 255, 0.94);
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+    gap: 14px;
+    border: 1px solid var(--cardBorder);
+    border-radius: 8px;
 }
 
 .section1 .ctpaperlink::-webkit-scrollbar {
     display: none;
+}
+
+.section1 .ctpaperlink h3 {
+    width: 100%;
+    color: #0f172a;
+    font-size: 21px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #eef6f4;
+}
+
+.section1 .ctpaperlink hr {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #dbe7e5;
+}
+
+.section1 .ctpaperlink a {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
+}
+
+.section1 .ctpaperlink a:hover {
+    background: var(--borderColor);
+    color: #ffffff;
+    text-decoration: none;
+    border-color: var(--borderColor);
 }
 
 .footer {
@@ -161,11 +229,17 @@ a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px 10px;
-    background-color: var(--footer);
+    gap: 6px;
+    padding: 26px 10px;
+    background-color: rgba(255, 255, 255, 0.9);
     color:var(--color);
     text-align: center;
-    box-shadow: 0px 0px 1px 1px var(--boxShadow);
+    border-top: 1px solid var(--cardBorder);
+    box-shadow: 0 -10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.footer p {
+    color: var(--mutedColor);
 }
 
 /* desktop view  */
@@ -182,8 +256,8 @@ a:hover {
 @media screen and (max-width:768px) {
     .header {
         flex-direction: column;
-        gap: 20px;
-        padding: 20px 0px;
+        gap: 18px;
+        padding: 18px 12px;
     }
 
     .header .logoCon .logo {
@@ -206,9 +280,14 @@ a:hover {
     }
     .section1 {
         grid-template-columns: repeat(1, calc(100% - 15px));
-        gap: 10px;
+        gap: 14px;
     }
     .greetWord {
         width:calc(100% - 15px);
+    }
+
+    .header .links>a {
+        padding: 9px 12px;
+        font-size: 14px;
     }
 }
