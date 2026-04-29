@@ -19,7 +19,11 @@
 
 body{
     min-height: 100vh;
-    background:
+
+}
+
+.container {
+        background:
         linear-gradient(rgba(15, 118, 110, 0.18) 1px, transparent 1px),
         linear-gradient(90deg, rgba(15, 118, 110, 0.18) 1px, transparent 1px),
         radial-gradient(circle at top left, rgba(20, 184, 166, 0.16), transparent 30%),
@@ -27,8 +31,6 @@ body{
     background-size: 34px 34px, 34px 34px, auto, auto;
     color: var(--color);
 }
-
-.container {}
 
 .header {
     display: flex;
