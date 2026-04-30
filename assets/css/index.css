@@ -132,7 +132,7 @@ a:hover {
     flex-direction: column;
     margin: 14px auto 28px;
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
-    padding: 42px 28px;
+    padding: 40px 0px;
     border-radius: 8px;
     text-align: center;
     background:
