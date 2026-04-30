@@ -6,30 +6,30 @@
 }
 
 :root {
-    --headerColor: #ffffff;
-    --borderColor: #0f766e;
+    --headerColor: #111827;
+    --borderColor: #22d3ee;
     --accentColor: #f59e0b;
-    --color: #172033;
-    --mutedColor: #64748b;
-    --footer: #eef6f4;
-    --boxShadow: rgba(15, 23, 42, 0.12);
-    --backGroundColor: #f6faf9;
-    --cardBorder: rgba(15, 118, 110, 0.16);
+    --color: #e5eefb;
+    --mutedColor: #9caec7;
+    --footer: #0b1120;
+    --boxShadow: rgba(0, 0, 0, 0.35);
+    --backGroundColor: #08111f;
+    --cardBorder: rgba(34, 211, 238, 0.22);
 }
 
 body {
     min-height: 100vh;
-    background: #ffffff;
+    background: #08111f;
 }
 
 .container {
     position: relative;
     min-height: 100vh;
     background:
-        linear-gradient(rgba(15, 118, 110, 0.18) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(15, 118, 110, 0.18) 1px, transparent 1px),
-        radial-gradient(circle at top left, rgba(20, 184, 166, 0.16), transparent 30%),
-        linear-gradient(135deg, #f6faf9 0%, #eef7ff 100%);
+        linear-gradient(rgba(34, 211, 238, 0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 211, 238, 0.12) 1px, transparent 1px),
+        radial-gradient(circle at top left, rgba(14, 165, 233, 0.18), transparent 32%),
+        linear-gradient(135deg, #08111f 0%, #0f172a 58%, #111827 100%);
     background-size: 34px 34px, 34px 34px, auto, auto;
     color: var(--color);
 }
@@ -39,7 +39,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 34px 16px 18px;
-    color: #0f172a;
+    color: #f8fafc;
     text-align: center;
 }
 
@@ -57,8 +57,8 @@ body {
 .googleForm iframe {
     width: min(100%, 960px);
     border-radius: 8px;
-    background: #ffffff;
-    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+    background: #111827;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
     border: 1px solid var(--cardBorder);
 }
 a {
@@ -80,7 +80,7 @@ a {
 }
 
 .goToHome a {
-    color: #ffffff;
+    color: #08111f;
     font-weight: 700;
 }
 
@@ -95,9 +95,9 @@ a {
     flex-direction: column;
     gap: 6px;
     padding: 26px 10px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(11, 17, 32, 0.92);
     border-top: 1px solid var(--cardBorder);
-    box-shadow: 0 -10px 30px rgba(15, 23, 42, 0.05);
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.22);
 }
 
 .footer p {
