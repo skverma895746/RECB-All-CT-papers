@@ -6,31 +6,35 @@
 }
 
 :root {
-    --headerColor: #111827;
-    --borderColor: #22d3ee;
-    --accentColor: #f59e0b;
-    --color: #e5eefb;
-    --mutedColor: #9caec7;
-    --footer: #0b1120;
+    --headerColor: #1f2933;
+    --borderColor: #34d399;
+    --accentColor: #fbbf24;
+    --color: #f3f7ed;
+    --mutedColor: #b6c2ad;
+    --footer: #12170f;
     --boxShadow: rgba(0, 0, 0, 0.35);
-    --backGroundColor: #08111f;
-    --cardBorder: rgba(34, 211, 238, 0.22);
+    --backGroundColor: #10150f;
+    --cardBorder: rgba(52, 211, 153, 0.24);
+}
+
+html,
+body {
+    min-height: 100vh;
 }
 
 body {
-    min-height: 100vh;
-    background: #08111f;
+    background: #10150f;
 }
 
 .container {
     position: relative;
-    min-height: 100vh;
+    height:100%;
     background:
-        linear-gradient(rgba(34, 211, 238, 0.12) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(34, 211, 238, 0.12) 1px, transparent 1px),
-        radial-gradient(circle at top left, rgba(14, 165, 233, 0.18), transparent 32%),
-        linear-gradient(135deg, #08111f 0%, #0f172a 58%, #111827 100%);
-    background-size: 34px 34px, 34px 34px, auto, auto;
+        linear-gradient(rgba(52, 211, 153, 0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(52, 211, 153, 0.12) 1px, transparent 1px),
+        radial-gradient(circle at top left, rgba(251, 191, 36, 0.16), transparent 32%),
+        linear-gradient(135deg, #10150f 0%, #172016 58%, #1f2933 100%);
+    background-size: 20px 20px, 20px 20px, auto, auto;
     color: var(--color);
 }
 
@@ -57,7 +61,7 @@ body {
 .googleForm iframe {
     width: min(100%, 960px);
     border-radius: 8px;
-    background: #111827;
+    background: #1c2a24;
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
     border: 1px solid var(--cardBorder);
 }
@@ -80,7 +84,7 @@ a {
 }
 
 .goToHome a {
-    color: #08111f;
+    color: #10150f;
     font-weight: 700;
 }
 
@@ -95,7 +99,7 @@ a {
     flex-direction: column;
     gap: 6px;
     padding: 26px 10px;
-    background-color: rgba(11, 17, 32, 0.92);
+    background-color: rgba(18, 23, 15, 0.92);
     border-top: 1px solid var(--cardBorder);
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.22);
 }
