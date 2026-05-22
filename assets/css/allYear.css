@@ -6,29 +6,29 @@
 }
 
 :root {
-    --headerColor: #1f2933;
-    --borderColor: #34d399;
-    --accentColor: #fbbf24;
-    --color: #f3f7ed;
-    --mutedColor: #b6c2ad;
-    --footer: #12170f;
-    --boxShadow: rgba(0, 0, 0, 0.35);
-    --backGroundColor: #10150f;
-    --cardBorder: rgba(52, 211, 153, 0.24);
+    --headerColor: #1e3a8a;
+    --borderColor: #0f766e;
+    --accentColor: #f59e0b;
+    --color: #172033;
+    --mutedColor: #64748b;
+    --footer: #102a43;
+    --boxShadow: rgba(30, 58, 138, 0.16);
+    --backGroundColor: #f4f8fb;
+    --cardBorder: rgba(30, 58, 138, 0.14);
 }
 
 body{
     min-height: 100vh;
-    background: #10150f;
+    background: var(--backGroundColor);
 }
 
 .container {
     height: 100%;
     background:
-        linear-gradient(rgba(52, 211, 153, 0.12) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(52, 211, 153, 0.12) 1px, transparent 1px),
-        radial-gradient(circle at top left, rgba(251, 191, 36, 0.16), transparent 32%),
-        linear-gradient(135deg, #10150f 0%, #172016 58%, #1f2933 100%);
+        linear-gradient(rgba(30, 58, 138, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 58, 138, 0.06) 1px, transparent 1px),
+        radial-gradient(circle at top left, rgba(245, 158, 11, 0.15), transparent 32%),
+        linear-gradient(135deg, #f8fbff 0%, #eef6ff 55%, #e9f7f4 100%);
     background-size: 20px 20px, 20px 20px, auto, auto;
     color: var(--color);
 }
@@ -38,12 +38,12 @@ body{
     justify-content: space-evenly;
     align-items: center;
     padding: 12px 28px;
-    background-color: rgba(31, 41, 51, 0.92);
-    color:var(--color);
+    background-color: rgba(30, 58, 138, 0.94);
+    color:#ffffff;
     position: sticky;
     top: 0;
     border-bottom: 1px solid var(--cardBorder);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+    box-shadow: 0 12px 30px rgba(30, 58, 138, 0.2);
     backdrop-filter: blur(14px);
     z-index: 1000;
 }
@@ -60,8 +60,8 @@ body{
     height: 72px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #172016;
-    box-shadow: 0 0 0 3px var(--borderColor), 0 10px 24px rgba(0, 0, 0, 0.34);
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 3px var(--accentColor), 0 10px 24px rgba(30, 58, 138, 0.24);
 }
 
 .header .logo img {
@@ -97,15 +97,15 @@ body{
     padding: 10px 16px;
     border-radius: 999px;
     border: 1px solid var(--cardBorder);
-    background: #1c2a24;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
     font-weight: 700;
     transition: 0.25s ease;
 }
 
 .header .links>a:hover {
     background:var(--borderColor);
-    color: #10150f;
+    color: #ffffff;
     text-decoration: none;
     transform: translateY(-2px);
 }
@@ -136,9 +136,9 @@ a:hover {
     width: min(92vw, 360px);
     font-size: 20px;
     border-radius:8px;
-    background: #151f1a;
-    box-shadow: 0 18px 44px rgba(15, 23, 42, 0.24);
-    color:#fde68a;
+    background: #fff7ed;
+    box-shadow: 0 18px 44px rgba(30, 58, 138, 0.12);
+    color:#92400e;
     padding:15px;
     z-index: 10000;
     transition: bottom 0.4s ease-in-out;
@@ -154,12 +154,12 @@ a:hover {
     align-items: center;
     padding:28px 24px;
     text-align: center;
-    background:linear-gradient(135deg, rgba(5, 150, 105, 0.9), rgba(180, 83, 9, 0.82));
+    background:linear-gradient(135deg, rgba(30, 58, 138, 0.93), rgba(15, 118, 110, 0.86));
     color: white;
     width:1120px;
     margin:0px auto;
     border-radius: 8px;
-    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+    box-shadow: 0 24px 70px rgba(30, 58, 138, 0.18);
 }
 
 .greetWord h3 {
@@ -185,8 +185,8 @@ a:hover {
     align-items: center;
     flex-direction: column;
     padding: 24px 22px;
-    background:rgba(24, 34, 30, 0.9);
-    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.26);
+    background:rgba(255, 255, 255, 0.92);
+    box-shadow: 0 18px 42px rgba(30, 58, 138, 0.12);
     gap: 14px;
     border: 1px solid var(--cardBorder);
     border-radius: 8px;
@@ -198,33 +198,138 @@ a:hover {
 
 .section1 .ctpaperlink h3 {
     width: 100%;
-    color: #f8fafc;
+    color: var(--headerColor);
     font-size: 21px;
     padding: 10px 12px;
     border-radius: 8px;
-    background: #1c2a24;
+    background: #fff7ed;
 }
 
 .section1 .ctpaperlink hr {
     width: 100%;
     border: 0;
-    border-top: 1px solid rgba(52, 211, 153, 0.2);
+    border-top: 1px solid var(--cardBorder);
 }
 
 .section1 .ctpaperlink a {
     width: 100%;
     padding: 12px 14px;
     border-radius: 8px;
-    background: #151f1a;
-    border: 1px solid rgba(52, 211, 153, 0.2);
-    color: #f3f7ed;
+    background: #eef6ff;
+    border: 1px solid var(--cardBorder);
+    color: var(--color);
 }
 
 .section1 .ctpaperlink a:hover {
     background: var(--borderColor);
-    color: #10150f;
+    color: #ffffff;
     text-decoration: none;
     border-color: var(--borderColor);
+}
+
+/* Syllabus page branch rows */
+.syllabusRows {
+    display: grid;
+    grid-template-columns: minmax(0, 1120px);
+    justify-content: center;
+    gap: 28px;
+    padding-bottom: 20px;
+}
+
+/* One branch row with year cards */
+.syllabusBranchRow {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    padding: 32px 22px 24px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 18px 42px rgba(30, 58, 138, 0.12);
+    border: 1px solid var(--cardBorder);
+    border-radius: 8px;
+}
+
+/* Small branch-name badge on the top-left corner of each row */
+.rowTooltip {
+    position: absolute;
+    top: 0;
+    left: 18px;
+    transform: translateY(-50%);
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: #fff7ed;
+    border: 1px solid rgba(245, 158, 11, 0.28);
+    color: #92400e;
+    font-size: 14px;
+    line-height: 1.2;
+    box-shadow: 0 10px 24px rgba(30, 58, 138, 0.12);
+    white-space: nowrap;
+}
+
+.syllabusBranchRow a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110px;
+    padding: 16px;
+    border-radius: 8px;
+    background: #eef6ff;
+    border: 1px solid var(--cardBorder);
+    color: var(--color);
+    font-weight: 700;
+    text-align: center;
+}
+
+.syllabusBranchRow a:hover {
+    background: var(--borderColor);
+    color: #ffffff;
+    text-decoration: none;
+    border-color: var(--borderColor);
+    transform: translateY(-3px);
+}
+
+/* PYQ page branch rows */
+.pyqRows {
+    display: grid;
+    grid-template-columns: minmax(0, 1120px);
+    justify-content: center;
+    gap: 28px;
+    padding-bottom: 20px;
+}
+
+/* One branch row with semester cards */
+.pyqBranchRow {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 14px;
+    padding: 32px 22px 24px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 18px 42px rgba(30, 58, 138, 0.12);
+    border: 1px solid var(--cardBorder);
+    border-radius: 8px;
+}
+
+.pyqBranchRow a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 96px;
+    padding: 14px;
+    border-radius: 8px;
+    background: #eef6ff;
+    border: 1px solid var(--cardBorder);
+    color: var(--color);
+    font-weight: 700;
+    text-align: center;
+}
+
+.pyqBranchRow a:hover {
+    background: var(--borderColor);
+    color: #ffffff;
+    text-decoration: none;
+    border-color: var(--borderColor);
+    transform: translateY(-3px);
 }
 
 .footer {
@@ -234,15 +339,15 @@ a:hover {
     flex-direction: column;
     gap: 6px;
     padding: 26px 10px;
-    background-color: rgba(18, 23, 15, 0.92);
-    color:var(--color);
+    background-color: var(--footer);
+    color:#ffffff;
     text-align: center;
     border-top: 1px solid var(--cardBorder);
-    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 -10px 30px rgba(30, 58, 138, 0.18);
 }
 
 .footer p {
-    color: var(--mutedColor);
+    color: #cbd5e1;
 }
 
 /* desktop view  */
@@ -285,6 +390,27 @@ a:hover {
         grid-template-columns: repeat(1, calc(100% - 15px));
         gap: 14px;
     }
+
+    .syllabusRows {
+        grid-template-columns: repeat(1, calc(100% - 15px));
+        gap: 24px;
+    }
+
+    .syllabusBranchRow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .pyqRows {
+        grid-template-columns: repeat(1, calc(100% - 15px));
+        gap: 24px;
+    }
+
+    .pyqBranchRow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
     .greetWord {
         width:calc(100% - 15px);
     }

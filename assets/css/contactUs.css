@@ -6,15 +6,15 @@
 }
 
 :root {
-    --headerColor: #1f2933;
-    --borderColor: #34d399;
-    --accentColor: #fbbf24;
-    --color: #f3f7ed;
-    --mutedColor: #b6c2ad;
-    --footer: #12170f;
-    --boxShadow: rgba(0, 0, 0, 0.35);
-    --backGroundColor: #10150f;
-    --cardBorder: rgba(52, 211, 153, 0.24);
+    --headerColor: #1e3a8a;
+    --borderColor: #0f766e;
+    --accentColor: #f59e0b;
+    --color: #172033;
+    --mutedColor: #64748b;
+    --footer: #102a43;
+    --boxShadow: rgba(30, 58, 138, 0.16);
+    --backGroundColor: #f4f8fb;
+    --cardBorder: rgba(30, 58, 138, 0.14);
 }
 
 html,
@@ -23,17 +23,17 @@ body {
 }
 
 body {
-    background: #10150f;
+    background: var(--backGroundColor);
 }
 
 .container {
     position: relative;
     height:100%;
     background:
-        linear-gradient(rgba(52, 211, 153, 0.12) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(52, 211, 153, 0.12) 1px, transparent 1px),
-        radial-gradient(circle at top left, rgba(251, 191, 36, 0.16), transparent 32%),
-        linear-gradient(135deg, #10150f 0%, #172016 58%, #1f2933 100%);
+        linear-gradient(rgba(30, 58, 138, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 58, 138, 0.06) 1px, transparent 1px),
+        radial-gradient(circle at top left, rgba(245, 158, 11, 0.15), transparent 32%),
+        linear-gradient(135deg, #f8fbff 0%, #eef6ff 55%, #e9f7f4 100%);
     background-size: 20px 20px, 20px 20px, auto, auto;
     color: var(--color);
 }
@@ -43,7 +43,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 34px 16px 18px;
-    color: #f8fafc;
+    color: var(--headerColor);
     text-align: center;
 }
 
@@ -61,8 +61,8 @@ body {
 .googleForm iframe {
     width: min(100%, 960px);
     border-radius: 8px;
-    background: #1c2a24;
-    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+    background: #ffffff;
+    box-shadow: 0 24px 70px rgba(30, 58, 138, 0.16);
     border: 1px solid var(--cardBorder);
 }
 a {
@@ -84,7 +84,7 @@ a {
 }
 
 .goToHome a {
-    color: #10150f;
+    color: #ffffff;
     font-weight: 700;
 }
 
@@ -99,11 +99,11 @@ a {
     flex-direction: column;
     gap: 6px;
     padding: 26px 10px;
-    background-color: rgba(18, 23, 15, 0.92);
+    background-color: var(--footer);
     border-top: 1px solid var(--cardBorder);
-    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 -10px 30px rgba(30, 58, 138, 0.18);
 }
 
 .footer p {
-    color: var(--mutedColor);
+    color: #cbd5e1;
 }

@@ -6,32 +6,32 @@
 }
 
 :root {
-    --headerColor: #1f2933;
-    --borderColor: #34d399;
-    --accentColor: #fbbf24;
-    --color: #f3f7ed;
-    --mutedColor: #b6c2ad;
-    --footer: #12170f;
-    --boxShadow: rgba(0, 0, 0, 0.35);
-    --boxShadowSoft: rgba(52, 211, 153, 0.18);
-    --backGroundColor: #10150f;
-    --cardBorder: rgba(52, 211, 153, 0.24);
+    --headerColor: #1e3a8a;
+    --borderColor: #0f766e;
+    --accentColor: #f59e0b;
+    --color: #172033;
+    --mutedColor: #64748b;
+    --footer: #102a43;
+    --boxShadow: rgba(30, 58, 138, 0.16);
+    --boxShadowSoft: rgba(15, 118, 110, 0.14);
+    --backGroundColor: #f4f8fb;
+    --cardBorder: rgba(30, 58, 138, 0.14);
 }
 
 body {
     min-height: 100vh;
-    background: #10150f;
+    background: var(--backGroundColor);
 }
 
 .container {
     position: relative;
     height: 100%;
     background:
-        linear-gradient(rgba(52, 211, 153, 0.12) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(52, 211, 153, 0.12) 1px, transparent 1px),
-        radial-gradient(circle at top left, rgba(251, 191, 36, 0.16), transparent 32%),
-        linear-gradient(135deg, #10150f 0%, #172016 58%, #1f2933 100%);
-    background-size:20px 20px, 20px 20px, auto, auto;
+        linear-gradient(rgba(30, 58, 138, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 58, 138, 0.06) 1px, transparent 1px),
+        radial-gradient(circle at top left, rgba(245, 158, 11, 0.15), transparent 32%),
+        linear-gradient(135deg, #f8fbff 0%, #eef6ff 55%, #e9f7f4 100%);
+    background-size: 20px 20px, 20px 20px, auto, auto;
     color: var(--color);
 }
 
@@ -42,11 +42,11 @@ body {
     justify-content: space-evenly;
     align-items: center;
     padding: 12px 28px;
-    background-color: rgba(31, 41, 51, 0.92);
-    color: var(--color);
+    background-color: rgba(30, 58, 138, 0.94);
+    color: #ffffff;
     z-index: 1000;
     border-bottom: 1px solid var(--cardBorder);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+    box-shadow: 0 12px 30px rgba(30, 58, 138, 0.2);
     backdrop-filter: blur(14px);
 }
 
@@ -62,8 +62,8 @@ body {
     height: 72px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #172016;
-    box-shadow: 0 0 0 3px var(--borderColor), 0 10px 24px rgba(0, 0, 0, 0.34);
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 3px var(--accentColor), 0 10px 24px rgba(30, 58, 138, 0.24);
 }
 
 .header .logo img {
@@ -89,8 +89,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .header .links>a {
@@ -99,15 +98,15 @@ body {
     padding: 10px 16px;
     border-radius: 999px;
     border: 1px solid var(--cardBorder);
-    background: #1c2a24;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
     font-weight: 700;
     transition: 0.25s ease;
 }
 
 .header .links>a:hover {
     background: var(--borderColor);
-    color: #10150f;
+    color: #ffffff;
     text-decoration: none;
     transform: translateY(-2px);
 }
@@ -131,12 +130,12 @@ a:hover {
     align-items: center;
     flex-direction: column;
     margin: 14px auto 28px;
-    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+    box-shadow: 0 24px 70px rgba(30, 58, 138, 0.18);
     padding: 40px 0px;
     border-radius: 8px;
     text-align: center;
     background:
-        linear-gradient(135deg, rgba(5, 150, 105, 0.9), rgba(180, 83, 9, 0.82)),
+        linear-gradient(135deg, rgba(30, 58, 138, 0.93), rgba(15, 118, 110, 0.86)),
         var(--headerColor);
     color: #ffffff;
     overflow: hidden;
@@ -160,10 +159,10 @@ a:hover {
 
 .errorDilogBox {
     position: fixed;
-    left:0;
-    right:0;
-    bottom:-100%;
-    margin:auto;
+    left: 0;
+    right: 0;
+    bottom: -100%;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,24 +170,25 @@ a:hover {
     text-align: center;
     width: min(92vw, 360px);
     font-size: 20px;
-    border-radius:8px;
-    background: #151f1a;
-    box-shadow: 0 18px 44px rgba(15, 23, 42, 0.24);
-    color:#fde68a;
-    padding:15px;
+    border-radius: 8px;
+    background: #fff7ed;
+    box-shadow: 0 18px 44px rgba(30, 58, 138, 0.12);
+    color: #92400e;
+    padding: 15px;
     z-index: 10000;
     transition: bottom 0.4s ease-in-out;
 }
+
 .errorDilogBox #errorIcon {
-    font-size:30px;
+    font-size: 30px;
     margin-bottom: 5px;
 }
 
 .section1 {
     display: grid;
     grid-template-columns: repeat(2, 550px);
-    justify-content: center;
-    align-items: center;
+    place-content: center;
+    place-items: stretch;
     gap: 22px;
     padding-bottom: 20px;
 }
@@ -199,34 +199,162 @@ a:hover {
     align-items: center;
     flex-direction: column;
     padding: 28px 24px;
-    background: rgba(24, 34, 30, 0.9);
+    background: rgba(255, 255, 255, 0.92);
     gap: 14px;
     border-radius: 8px;
     border: 1px solid var(--cardBorder);
-    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.26);
+    box-shadow: 0 18px 42px rgba(30, 58, 138, 0.12);
     transition: 0.25s ease;
 }
 
 .section1 .ctpaperlink:hover {
     transform: translateY(-4px);
-    box-shadow: 0 24px 52px rgba(52, 211, 153, 0.16);
+    box-shadow: 0 24px 52px rgba(15, 118, 110, 0.16);
 }
 
 .section1 .ctpaperlink a {
     width: 100%;
     padding: 14px 16px;
     border-radius: 8px;
-    background: #151f1a;
-    border: 1px solid rgba(52, 211, 153, 0.2);
-    color: #f3f7ed;
+    background: #eef6ff;
+    border: 1px solid var(--cardBorder);
+    color: var(--color);
     font-weight: 700;
 }
 
 .section1 .ctpaperlink a:hover {
     background: var(--borderColor);
-    color: #10150f;
+    color: #ffffff;
     text-decoration: none;
     border-color: var(--borderColor);
+}
+
+.syllabusAndpapersContainer {
+    margin: 20px auto;
+    width: 1120px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid var(--cardBorder);
+    box-shadow: 0 18px 42px rgba(30, 58, 138, 0.12);
+    color: var(--color);
+    text-align: center;
+    padding: 26px 24px 30px;
+}
+
+.syllabusAndpapersContainer h1 {
+    color: var(--headerColor);
+    font-size: clamp(24px, 3vw, 34px);
+    line-height: 1.25;
+}
+
+.syllabusAndpapersRow {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    place-content: center;
+    place-items: stretch;
+    margin-top: 24px;
+    gap: 22px;
+}
+
+.syllabusAndpapers {
+    position: relative;
+    padding: 28px 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 18px 42px rgba(30, 58, 138, 0.12);
+    border: 1px solid var(--cardBorder);
+    border-radius: 8px;
+    transition: 0.25s ease;
+}
+
+.syllabusAndpapers:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 52px rgba(15, 118, 110, 0.16);
+}
+
+.cardTooltip {
+    position: absolute;
+    top: 0;
+    left: 18px;
+    transform: translateY(-50%);
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: #fff7ed;
+    border: 1px solid rgba(245, 158, 11, 0.28);
+    color: #92400e;
+    font-size: 14px;
+    line-height: 1.2;
+    box-shadow: 0 10px 24px rgba(30, 58, 138, 0.12);
+    white-space: nowrap;
+}
+
+.syllabusAndpapers a {
+    display: inline-flex;
+    width: 100%;
+    text-decoration: none;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background: #eef6ff;
+    border: 1px solid var(--cardBorder);
+    color: var(--color);
+    font-weight: 700;
+}
+
+.syllabusAndpapers a:hover {
+    background: var(--borderColor);
+    color: #ffffff;
+    text-decoration: none;
+    border-color: var(--borderColor);
+}
+
+.resourcePage {
+    width: min(1120px, calc(100% - 30px));
+    min-height: 60vh;
+    margin: 28px auto;
+    padding: 34px 24px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid var(--cardBorder);
+    box-shadow: 0 18px 42px rgba(30, 58, 138, 0.12);
+    text-align: center;
+}
+
+.resourcePage h1 {
+    margin-bottom: 24px;
+    color: var(--headerColor);
+    font-size: clamp(30px, 4vw, 48px);
+}
+
+.resourceCards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.resourceCards a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110px;
+    padding: 18px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid var(--cardBorder);
+    box-shadow: 0 18px 42px rgba(30, 58, 138, 0.12);
+    color: var(--color);
+    font-weight: 700;
+    text-align: center;
+}
+
+.resourceCards a:hover {
+    background: var(--borderColor);
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-3px);
 }
 
 .footer {
@@ -236,15 +364,15 @@ a:hover {
     flex-direction: column;
     gap: 6px;
     padding: 26px 10px;
-    background-color: rgba(18, 23, 15, 0.92);
-    color: var(--color);
+    background-color: var(--footer);
+    color: #ffffff;
     text-align: center;
     border-top: 1px solid var(--cardBorder);
-    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 -10px 30px rgba(30, 58, 138, 0.18);
 }
 
 .footer p {
-    color: var(--mutedColor);
+    color: #cbd5e1;
 }
 
 /* desktop view  */
@@ -290,8 +418,27 @@ a:hover {
         gap: 14px;
     }
 
+    .syllabusAndpapersContainer {
+        width: 95%;
+        padding: 22px 14px 24px;
+    }
+
+    .syllabusAndpapersRow {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .resourcePage {
+        padding: 24px 14px;
+    }
+
+    .resourceCards {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 14px;
+    }
+
     .header .links>a {
         padding: 9px 12px;
-        font-size: 14px;
+        font-size: 12px;
     }
 }
