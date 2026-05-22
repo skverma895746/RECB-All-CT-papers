@@ -124,7 +124,7 @@ a:hover {
 }
 
 .main {
-    width: 1120px;
+    width: min(1120px, calc(100% - 30px));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,7 +231,7 @@ a:hover {
 
 .syllabusAndpapersContainer {
     margin: 20px auto;
-    width: 1120px;
+    width: min(1120px, calc(100% - 30px));
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.78);
     border: 1px solid var(--cardBorder);
@@ -261,7 +261,7 @@ a:hover {
     padding: 28px 24px;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     gap: 14px;
     background: rgba(255, 255, 255, 0.92);
@@ -293,7 +293,9 @@ a:hover {
 }
 
 .syllabusAndpapers a {
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     text-decoration: none;
     padding: 14px 16px;
@@ -376,14 +378,24 @@ a:hover {
 }
 
 /* desktop view  */
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1024px) {
     .section1 {
-        grid-template-columns: repeat(2, 350px);
+        padding: 0px 14px 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    
+}
 
+ .main {
+        width: calc(100% - 30px);
     }
 
-    .main {
-        width: 720px;
+    .syllabusAndpapersContainer {
+        width: calc(100% - 30px);
+        padding: 22px 14px 24px;
+    }
+
+    .syllabusAndpapersRow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 

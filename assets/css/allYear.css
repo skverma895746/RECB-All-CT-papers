@@ -156,7 +156,7 @@ a:hover {
     text-align: center;
     background:linear-gradient(135deg, rgba(30, 58, 138, 0.93), rgba(15, 118, 110, 0.86));
     color: white;
-    width:1120px;
+    width:min(1120px, calc(100% - 30px));
     margin:0px auto;
     border-radius: 8px;
     box-shadow: 0 24px 70px rgba(30, 58, 138, 0.18);
@@ -230,8 +230,10 @@ a:hover {
 /* Syllabus page branch rows */
 .syllabusRows {
     display: grid;
-    grid-template-columns: minmax(0, 1120px);
+    grid-template-columns: minmax(0, 1fr);
     justify-content: center;
+    width: min(1120px, calc(100% - 30px));
+    margin: 0 auto;
     gap: 28px;
     padding-bottom: 20px;
 }
@@ -240,7 +242,7 @@ a:hover {
 .syllabusBranchRow {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 18px;
     padding: 32px 22px 24px;
     background: rgba(255, 255, 255, 0.92);
@@ -291,8 +293,10 @@ a:hover {
 /* PYQ page branch rows */
 .pyqRows {
     display: grid;
-    grid-template-columns: minmax(0, 1120px);
+    grid-template-columns: minmax(0, 1fr);
     justify-content: center;
+    width: min(1120px, calc(100% - 30px));
+    margin: 0 auto;
     gap: 28px;
     padding-bottom: 20px;
 }
@@ -350,6 +354,15 @@ a:hover {
     color: #cbd5e1;
 }
 
+.footer a {
+    color: #facc15;
+    font-weight: 700;
+}
+
+.footer a:hover {
+    color: #5eead4;
+}
+
 /* desktop view  */
 @media screen and (max-width:1024px) {
     .section1 {
@@ -357,6 +370,19 @@ a:hover {
     }
     .greetWord {
         width:720px;
+    }
+
+    .syllabusRows,
+    .pyqRows {
+        width: 720px;
+    }
+
+    .syllabusBranchRow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pyqBranchRow {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
 
@@ -392,7 +418,8 @@ a:hover {
     }
 
     .syllabusRows {
-        grid-template-columns: repeat(1, calc(100% - 15px));
+        width: calc(100% - 15px);
+        grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 24px;
     }
 
@@ -402,7 +429,8 @@ a:hover {
     }
 
     .pyqRows {
-        grid-template-columns: repeat(1, calc(100% - 15px));
+        width: calc(100% - 15px);
+        grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 24px;
     }
 

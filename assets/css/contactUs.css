@@ -107,3 +107,12 @@ a {
 .footer p {
     color: #cbd5e1;
 }
+
+.footer a {
+    color: #facc15;
+    font-weight: 700;
+}
+
+.footer a:hover {
+    color: #5eead4;
+}
