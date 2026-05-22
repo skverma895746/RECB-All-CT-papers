@@ -377,6 +377,15 @@ a:hover {
     color: #cbd5e1;
 }
 
+.footer a {
+    color: #facc15;
+    font-weight: 700;
+}
+
+.footer a:hover {
+    color: #5eead4;
+}
+
 /* desktop view  */
 @media screen and (max-width:1024px) {
     .section1 {
